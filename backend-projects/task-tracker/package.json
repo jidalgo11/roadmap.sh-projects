@@ -1,0 +1,15 @@
+{
+	"name": "task-tracker",
+	"version": "1.0.0",
+	"description": "Solution for the [task-tracker](https://roadmap.sh/projects/task-tracker) project from [roadmap.sh](https://roadmap.sh)",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bin": {
+		"task-cli": "./index.js"
+	}
+}
