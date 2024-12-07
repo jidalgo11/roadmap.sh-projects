@@ -1,9 +1,11 @@
 const express = require("express");
 
+const articlesController = require("../controllers/articles");
+
 const router = express.Router();
 
-router.get("/", (req, res, next) => {
-	res.render("index");
-});
+router.get("/article/:id", articlesController.getArticle);
+
+router.get("/", articlesController.getFrontendArticles);
 
 module.exports = router;

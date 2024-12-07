@@ -39,7 +39,7 @@ class Article {
 
 	formatArticleDate(articleDate) {
 		const currentDate = new Date(articleDate);
-		const options = { year: "numeric", month: "long", day: "numeric" };
+		const options = { year: "numeric", month: "short", day: "numeric" };
 		const formattedDate = currentDate.toLocaleDateString("en-US", options);
 
 		return formattedDate;
