@@ -1,0 +1,64 @@
+.admin-articles {
+	display: flex;
+	flex-direction: column;
+}
+
+.admin-articles .article {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #eee;
+	padding: 15px 25px;
+	gap: 35px;
+}
+
+.admin-articles .article:nth-child(2n) {
+	background-color: #fafafa;
+}
+
+.admin-articles .article .article-links {
+	display: flex;
+	gap: 15px;
+}
+
+.admin-articles .article .article-links a:nth-child(2) {
+	color: firebrick;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 35%;
+	margin: 0 auto;
+	gap: 20px;
+}
+
+form div {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+input,
+textarea {
+	padding-left: 10px;
+}
+
+input {
+	height: 40px;
+}
+
+textarea {
+	height: 200px;
+}
+
+button {
+	background-color: #364f63;
+	border: none;
+	color: #fff;
+	height: 45px;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 1.15em;
+}
