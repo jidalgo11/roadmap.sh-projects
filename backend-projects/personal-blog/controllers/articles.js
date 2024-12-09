@@ -10,6 +10,24 @@ exports.getAdminArticles = (req, res, next) => {
 	});
 };
 
+exports.getFrontendArticles = (req, res, next) => {
+	const articles = Article.fetchArticles();
+	res.render("index", {
+		pageTitle: "Personal Blog",
+		articles: articles,
+	});
+};
+
+exports.getArticle = (req, res, next) => {
+	const articles = Article.fetchArticles();
+	const articleId = parseInt(req.params.id, 10);
+	const article = articles.find((article) => article.id === articleId);
+	res.render("article", {
+		pageTitle: article.title,
+		article,
+	});
+};
+
 exports.getEditArticle = (req, res, next) => {
 	res.render("edit-article", {
 		pageTitle: "Personal Blog - Edit Article",
