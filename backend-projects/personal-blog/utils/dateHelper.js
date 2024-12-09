@@ -1,4 +1,4 @@
-const getFormattedDate = () => {
+const getFormattedDateForInput = () => {
 	const currentDate = new Date();
 
 	const year = currentDate.getFullYear();
@@ -8,4 +8,4 @@ const getFormattedDate = () => {
 	return `${year}-${month}-${day}`;
 };
 
-module.exports = { getFormattedDate };
+module.exports = { getFormattedDateForInput };
