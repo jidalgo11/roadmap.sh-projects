@@ -8,23 +8,20 @@
     <%= pageTitle %>
   </title>
   <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/admin.css">
 </head>
 
 <body>
   <header>
     <h1>Personal Blog</h1>
-    <a href="/">Articles</a>
+    <a href="/admin">Articles</a>
   </header>
+
   <main>
-    <h1>
-      <%= article.title %>
-    </h1>
-    <p>
-      <%= article.date %>
-    </p>
-    <p>
-      <%= article.content %>
-    </p>
+    <form action="/edit-article" method="POST">
+      <h2>Edit Article</h2>
+      <input type="text" hidden name="id">
+    </form>
   </main>
 </body>
 
