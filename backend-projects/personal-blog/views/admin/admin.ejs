@@ -8,13 +8,16 @@
     <%= pageTitle %>
   </title>
   <link rel="stylesheet" href="/css/style.min.css">
-  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/admin.min.css">
 </head>
 
 <body>
   <header>
     <h1>Personal Blog</h1>
-    <a href="/add-article">+ Add</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/add-article">+ Add</a>
+    </nav>
   </header>
 
   <main>
@@ -26,7 +29,7 @@
               <%= article.title %>
             </h2>
             <div class="article-links">
-              <a href="/edit-article">Edit</a>
+              <a href="/edit-article/<%= article.id %>">Edit</a>
               <a href="/delete-article">Delete</a>
             </div>
           </div>

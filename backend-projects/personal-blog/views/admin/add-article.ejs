@@ -8,7 +8,7 @@
     <%= pageTitle %>
   </title>
   <link rel="stylesheet" href="/css/style.min.css">
-  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/admin.min.css">
 </head>
 
 <body>
@@ -20,15 +20,12 @@
     <form action="/add-article" method="POST">
       <h2>New Article</h2>
       <div>
-        <input type="hidden" name="id">
-      </div>
-      <div>
         <label for="title">Title</label>
         <input type="text" name="title" id="title" placeholder="Enter the article title" maxlength="100">
       </div>
       <div>
         <label for="date">Date</label>
-        <input type="date" name="date" id="date" min="<%= inputDate %>">
+        <input type="date" name="date" id="date" min="<%= inputDate %>" value="<%= inputDate %>">
       </div>
       <div>
         <label for="content">Content</label>

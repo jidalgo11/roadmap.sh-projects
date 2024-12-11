@@ -29,8 +29,14 @@ exports.getArticle = (req, res, next) => {
 };
 
 exports.getEditArticle = (req, res, next) => {
+	const articleId = parseInt(req.params.id, 10);
+	const article = Article.fetchArticles().find(
+		(article) => article.id === articleId
+	);
+
 	res.render("edit-article", {
 		pageTitle: "Personal Blog - Edit Article",
+		article: article,
 		inputDate: getFormattedDateForInput(),
 	});
 };
@@ -47,3 +53,17 @@ exports.postAddArticle = (req, res, next) => {
 	article.addArticle();
 	res.redirect("/admin");
 };
+
+exports.postEditArticle = (req, res, next) => {
+	const id = parseInt(req.params.id, 10);
+	const editedData = {
+		title: req.body.title,
+		date: req.body.date,
+		content: req.body.content,
+	};
+
+	Article.editArticle(id, editedData);
+	res.redirect("/admin");
+};
+
+

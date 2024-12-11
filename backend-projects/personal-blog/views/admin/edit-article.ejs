@@ -8,7 +8,7 @@
     <%= pageTitle %>
   </title>
   <link rel="stylesheet" href="/css/style.min.css">
-  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/admin.min.css">
 </head>
 
 <body>
@@ -18,9 +18,21 @@
   </header>
 
   <main>
-    <form action="/edit-article" method="POST">
+    <form action="/edit-article/<%= article.id %>" method="POST">
       <h2>Edit Article</h2>
-      <input type="text" hidden name="id">
+      <div>
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" placeholder="Enter the article title" maxlength="100">
+      </div>
+      <div>
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date" min="<%= inputDate %>" value="<%= inputDate %>">
+      </div>
+      <div>
+        <label for="content">Content</label>
+        <textarea name="content" id="content" placeholder="Write your article here..."></textarea>
+      </div>
+      <button type="submit">Update</button>
     </form>
   </main>
 </body>
