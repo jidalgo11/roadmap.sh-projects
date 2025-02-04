@@ -16,7 +16,7 @@ This is a simple CLI for managing tasks.
 
 ## Installation
 
-***Clone the repo*** 
+**_Clone the repo_**
 
 ```bash
 git clone https://github.com/jidalgo11/roadmap.sh-projects.git
@@ -25,23 +25,26 @@ git clone https://github.com/jidalgo11/roadmap.sh-projects.git
 cd roadmap.sh-projects/backend-projects/task-tracker
 ```
 
-### Optional
+#### Optional
 
-Run ```npm link``` to install it globally.
+Run `npm link` to install it globally.
 
 ## Usage
 
 - Add a task
+
 ```bash
 task-cli add "Learn Nodes.js"
 ```
 
 - List tasks
+
 ```bash
 task-cli list
 ```
 
 - List tasks based on status
+
 ```bash
 # List todo tasks
 task-cli list todo
@@ -51,4 +54,11 @@ task-cli list in-progress
 
 # List done tasks
 task-cli list done
+```
+
+- Update task based on id
+
+```
+bash
+task-cli update 1 "Learn more Nodes.js"
 ```
