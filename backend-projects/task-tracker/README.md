@@ -4,17 +4,17 @@ Solution for the [task-tracker](https://roadmap.sh/projects/task-tracker) projec
 
 This is a simple CLI for managing tasks.
 
-# Features
+## Features
 
 - Add, List, Update, and Delete tasks.
 - Mark tasks `todo`, `in-progress`, or `done`.
 - List tasks based on their status: `todo`, `in-progress`, or `done`.
 
-# Prerequisites
+## Prerequisites
 
 - Node.js installed on your system.
 
-# Installation
+## Installation
 
 ***Clone the repo*** 
 
@@ -25,8 +25,30 @@ git clone https://github.com/jidalgo11/roadmap.sh-projects.git
 cd roadmap.sh-projects/backend-projects/task-tracker
 ```
 
-## Optional
+### Optional
 
 Run ```npm link``` to install it globally.
 
-# Usage
+## Usage
+
+- Add a task
+```bash
+task-cli add "Learn Nodes.js"
+```
+
+- List tasks
+```bash
+task-cli list
+```
+
+- List tasks based on status
+```bash
+# List todo tasks
+task-cli list todo
+
+# List in-progress tasks
+task-cli list in-progress
+
+# List done tasks
+task-cli list done
+```
