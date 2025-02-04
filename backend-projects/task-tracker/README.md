@@ -58,7 +58,12 @@ task-cli list done
 
 - Update task based on id
 
-```
-bash
+```bash
 task-cli update 1 "Learn more Nodes.js"
+```
+
+- Delete task based on id
+
+```bash
+task-cli delete 1
 ```
