@@ -27,4 +27,6 @@ cd roadmap.sh-projects/backend-projects/task-tracker
 
 ## Optional
 
-Run ```bash npm link``` to install it globally.
+Run ```npm link``` to install it globally.
+
+# Usage
