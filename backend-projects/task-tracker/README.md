@@ -25,45 +25,58 @@ git clone https://github.com/jidalgo11/roadmap.sh-projects.git
 cd roadmap.sh-projects/backend-projects/task-tracker
 ```
 
-#### Optional
+Give `index.js` execution permissions:
 
-Run `npm link` to install it globally.
+```bash
+chmod +x index.js
+```
 
 ## Usage
 
 - Add a task
 
 ```bash
-task-cli add "Learn Nodes.js"
+./index.js task-cli add "Learn Nodes.js"
 ```
 
 - List tasks
 
 ```bash
-task-cli list
+./index.js task-cli list
 ```
 
 - List tasks based on status
 
 ```bash
 # List todo tasks
-task-cli list todo
+./index.js task-cli list todo
 
 # List in-progress tasks
-task-cli list in-progress
+./index.js task-cli list in-progress
 
 # List done tasks
-task-cli list done
+./index.js task-cli list done
 ```
 
 - Update task based on id
 
 ```bash
-task-cli update 1 "Learn more Nodes.js"
+./index.js task-cli update 1 "Learn more Nodes.js"
 ```
 
 - Delete task based on id
 
 ```bash
-task-cli delete 1
+./index.js task-cli delete 1
+```
+
+## Optional
+
+Run `npm link` to install it globally.
+Then you can use the command anywhere in the system and omit ```./index.js``` to manage tasks.
+
+Example:
+
+```bash
+task-cli add "Learn Node.js"
 ```
