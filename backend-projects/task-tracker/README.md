@@ -33,19 +33,19 @@ chmod +x index.js
 
 ## Usage
 
-- Add a task
+Add a task
 
 ```bash
 ./index.js task-cli add "Learn Nodes.js"
 ```
 
-- List tasks
+List tasks
 
 ```bash
 ./index.js task-cli list
 ```
 
-- List tasks based on status
+List tasks based on status
 
 ```bash
 # List todo tasks
@@ -58,13 +58,13 @@ chmod +x index.js
 ./index.js task-cli list done
 ```
 
-- Update task based on id
+Update task based on id
 
 ```bash
 ./index.js task-cli update 1 "Learn more Nodes.js"
 ```
 
-- Delete task based on id
+Delete task based on id
 
 ```bash
 ./index.js task-cli delete 1
@@ -73,7 +73,7 @@ chmod +x index.js
 ## Optional
 
 Run `npm link` to install it globally.
-Then you can use the command anywhere in the system and omit ```./index.js``` to manage tasks.
+Then you can use the command anywhere in the system and omit `./index.js` to manage tasks.
 
 Example:
 
