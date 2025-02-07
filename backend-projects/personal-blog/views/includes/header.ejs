@@ -1,0 +1,13 @@
+<header class="bg-sky-950 text-white">
+	<div class="container mx-auto py-7 flex justify-between items-center">
+		<h1 class="text-4xl font-semibold">Personal Blog</h1>
+		<nav class="">
+			<% if(navLinks==='admin' ) {%>
+				<a href="/">Blog</a>
+				<% } else { %>
+					<a href="/admin" class="<%= path === '/admin' ? 'text-sky-300' : 'text-white' %> hover:text-sky-400">Admin</a>
+					<% } %>
+
+		</nav>
+	</div>
+</header>

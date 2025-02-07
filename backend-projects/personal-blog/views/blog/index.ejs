@@ -1,0 +1,33 @@
+<%- include('../includes/head.ejs') %>
+  <%- include('../includes/header.ejs') %>
+    <main>
+      <div class="container mx-auto py-8">
+        <% if (articles.length> 0) { %>
+          <div class="articles">
+            <% for (let article of articles) {%>
+              <div class="article">
+                <div class="article-date">
+                  <p>
+                    <%= article.date %>
+                  </p>
+                </div>
+                <div class="article-content">
+                  <a href="/article/<%= article.id %>">
+                    <%= article.title %>
+                  </a>
+                  <p>
+                    <%= article.content %>
+                  </p>
+                </div>
+              </div>
+              <% } %>
+          </div>
+          <% } else { %>
+
+            <% } %>
+      </div>
+    </main>
+
+    </body>
+
+    </html>

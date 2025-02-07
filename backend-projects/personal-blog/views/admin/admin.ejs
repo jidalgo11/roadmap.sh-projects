@@ -1,44 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('../includes/head.ejs') %>
+  <%- include('../includes/header.ejs') %>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    <%= pageTitle %>
-  </title>
-  <link rel="stylesheet" href="/css/style.min.css">
-  <link rel="stylesheet" href="/css/admin.min.css">
-</head>
-
-<body>
-  <header>
-    <h1>Personal Blog</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/add-article">+ Add</a>
-    </nav>
-  </header>
-
-  <main>
-    <% if (articles.length> 0) { %>
-      <div class="admin-articles">
-        <% for (let article of articles) { %>
-          <div class="article" data-id="<%= article.id %>">
-            <h2>
-              <%= article.title %>
-            </h2>
-            <div class="article-links">
-              <a href="/edit-article/<%= article.id %>">Edit</a>
-              <a href="/delete-article">Delete</a>
-            </div>
+    <main>
+      <div class="container mx-auto px-5">
+        <% if (articles.length> 0) { %>
+          <div class="admin-articles">
+            <% for (let article of articles) { %>
+              <div class="article" data-id="<%= article.id %>">
+                <h2>
+                  <%= article.title %>
+                </h2>
+                <div class="article-links">
+                  <a href="/edit-article/<%= article.id %>" class="cta">Edit</a>
+                  <form action="/delete-article/<%= article.id %>" method="POST">
+                    <button type="submit" class="cta">Delete</button>
+                  </form>
+                </div>
+              </div>
+              <% } %>
           </div>
-          <% } %>
+          <% } else { %>
+            <p>No Articles. <a href="/add-article">+ Add</a> article</p>
+            <% } %>
       </div>
-      <% } else { %>
-        <p>No Articles. <a href="/add-article">+ Add</a> article</p>
-        <% } %>
-  </main>
-</body>
+    </main>
+    </body>
 
-</html>
+    </html>
