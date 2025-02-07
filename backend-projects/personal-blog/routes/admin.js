@@ -1,17 +1,19 @@
 const express = require("express");
 
-const articlesController = require("../controllers/articles");
+const adminController = require("../controllers/admin");
 
 const router = express.Router();
 
-router.get("/admin", articlesController.getAdminArticles);
+router.get("/admin", adminController.getAdmin);
 
-router.get("/edit-article/:id", articlesController.getEditArticle);
+router.get("/edit-article/:id", adminController.getEditArticle);
 
-router.get("/add-article", articlesController.getAddArticle);
+router.get("/add-article", adminController.getAddArticle);
 
-router.post("/add-article", articlesController.postAddArticle);
+router.post("/add-article", adminController.postAddArticle);
 
-router.post("/edit-article/:id", articlesController.postEditArticle);
+router.post("/edit-article/:id", adminController.postEditArticle);
+
+router.post("/delete-article/:id", adminController.deleteArticle);
 
 module.exports = router;
