@@ -33,7 +33,17 @@ class Article {
 		article.date = Article.formatArticleDate(updatedData.date);
 		article.content = updatedData.content;
 
-		Article.writeArticles(articles);
+		this.writeArticles(articles);
+	}
+
+	static deleteArticle(id) {
+		const articles = Article.fetchArticles();
+		const articleIndex = articles.findIndex((article) => {
+			return article.id === id;
+		});
+
+		articles.splice(articleIndex, 1);
+		this.writeArticles(articles);
 	}
 
 	static fetchArticles() {
