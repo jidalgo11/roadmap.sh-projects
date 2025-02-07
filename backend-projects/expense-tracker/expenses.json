@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "description": "Breakfast",
+    "amount": "11",
+    "date": "2/6/2025"
+  },
+  {
+    "id": 2,
+    "description": "Breakfast",
+    "amount": "11",
+    "date": "2/6/2025"
+  },
+  {
+    "id": 4,
+    "description": "Breakfast",
+    "amount": "11",
+    "date": "2/6/2025"
+  },
+  {
+    "id": 5,
+    "description": "Breakfast",
+    "amount": "11",
+    "date": "2/6/2025"
+  },
+  {
+    "id": 6,
+    "description": "Breakfast",
+    "amount": "11",
+    "date": "2/6/2025"
+  }
+]
